@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WDD 231 Class Project - ListNest Chamber of Commerce</title>
+  <meta name="description" content="WDD 231 - Web Frontend Development I."/>
+  <meta name="author" content="Lucky George Olumah"/>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="scripts/script.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="branding">
+      <img src="images/logo.png" alt="ListNest Logo" class="logo">
+      <p>Chamber of Commerce</p>
+    </div>
+
+    <button id="menu-button" aria-label="Menu">☰</button>
+
+    <nav class="desktop-nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+      <button class="dark-toggle">🌙</button>
+    </nav>
+
+    <nav id="nav-menu" class="mobile-nav hidden">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html">Join</a>
+      <a href="discover.html">Discover</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="images/hero.png" alt="hero image" />
+      <button class="cta-btn">Keynote Tickets</button>
+    </section>
+
+    <h2>Home</h2>
+    <section class="info-cards">
+      <div class="card events">
+        <h3 class="card-title">Upcoming Real-Estate Events</h3>
+        <ul>
+          <li><strong>Market Trends Seminar</strong> - May 12, 6 PM @ Conference Hall, Ikeja</li>
+          <li><strong>Open House Expo</strong> - May 20-22, 10 AM - 4 PM @ City Convention Center, Ikoyi</li>
+          <li><strong>First-Time Buyer Workshop</strong> -  June 5, 2 PM @ Chamber Office, Victoria Island</li>
+        </ul>
+        </div>
+      <div class="card weather">
+<!-- content is replaced by script -->
+      </div>
+      <div class="card forecast">
+<!-- content is replaced by script -->
+      </div>
+    </section>
+
+    <section class="businesses">
+      <div class="biz-card">
+        <img src="images/mypadiman.png" width="160" alt="Business logo" />
+        <p><strong>MyPadiMan</strong></p>
+        <p>Neighborhood Errands & Delivery App</p>
+        <p>Email: georgeolumah@gmail.com</p>
+        <p>Phone: 806-510-4250</p>
+        <p>URL:   
+          <a href="https://dgeemedia.github.io/wdd131/Padiman-Making/index.html" target="_blank">
+          mypadiman</a>
+        </p>
+      </div>
+      <div class="biz-card">
+        <img src="images/mypadiman.png" width="160" alt="Business logo" />
+        <p><strong>MyPadiMan</strong></p>
+        <p>Neighborhood Errands & Delivery App</p>
+        <p>Email: georgeolumah@gmail.com</p>
+        <p>Phone: 806-510-4250</p>
+        <p>URL:   
+          <a href="https://dgeemedia.github.io/wdd131/Padiman-Making/index.html" target="_blank">
+          mypadiman</a>
+        </p>
+      </div>
+      <div class="biz-card">
+        <img src="images/mypadiman.png" width="160" alt="Business logo" />
+        <p><strong>MyPadiMan</strong></p>
+        <p>Neighborhood Errands & Delivery App</p>
+        <p>Email: georgeolumah@gmail.com</p>
+        <p>Phone: 806-510-4250</p>
+        <p>URL:   
+          <a href="https://dgeemedia.github.io/wdd131/Padiman-Making/index.html" target="_blank">
+          mypadiman</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p><strong>ListNest Chamber of Commerce</strong></p>
+        <p>10, Magbon Badagry</p>
+        <p>Lagos, Nigeria 234</p>
+        <p><a href="mailto:info@listnest.org">info@listnest.org</a></p>
+        <p><a href="tel:+2345552300">(234) 806-5104250</a></p>
+      </div>
+  
+      <div class="footer-center socials">
+        <a href="https://web.facebook.com/olumahbaba1" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/dgeemedia/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/lucky-george-olumah-58621870/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/dgeemedia/" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+  
+      <div class="footer-right">
+        <p><strong>WDD231 Class Project</strong></p>
+          <p>Lucky George Olumah</p>
+          <p>&copy; 2025 ListNest Chamber of Commerce</p>
+          <p>Last Modified: <span id="mod-date"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
