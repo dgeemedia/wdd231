@@ -202,23 +202,6 @@ nav button {
   max-height: 300px; /* Adjust based on content */
 }
 
-/* Dark Mode Toggle Icon Animation */
-.dark-toggle {
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-}
-
-.dark-toggle:hover {
-  transform: rotate(20deg);
-}
-
-/* Improved focus styles */
-a:focus,
-button:focus {
-  outline: 2px dashed #333;
-  outline-offset: 4px;
-}
-
 
 /* Footer Layout */
 footer {
