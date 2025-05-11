@@ -112,21 +112,24 @@ header {
   background: #023e8a;
 }
 
-/* COURSE CARDS (HORIZONTAL SCROLL ON MOBILE) */
+/* COURSE CARDS – SINGLE COLUMN GRID ON MOBILE */
 #course-cards {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr;    /* single column */
+  gap: 20px;                      /* match your res-grid gap */
+  padding: 20px 0;               /* vertical spacing */
+  margin: 0 auto;
+  max-width: 1200px;             /* optional limit, center if desired */
 }
+
 .course-card {
-  flex: 0 0 70%;
-  background: #fff;
+  background-color: #fff;
   padding: 1rem;
-  border-radius: 6px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   text-align: center;
 }
+
 .course-card.done {
   background: #9b2226;
   color: #fff;
@@ -201,7 +204,8 @@ footer p + p {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    overflow: visible;
     padding: 0;
+    margin: 0;
+    max-width: none;
   }
 }
