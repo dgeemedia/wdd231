@@ -181,4 +181,24 @@ footer p + p {
     overflow: visible;
     padding: 0;
   }
+
+  header {
+    position: relative; /* ensure child absolute positioning is relative to header */
+  }
+  
+  #author-name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;            /* remove any extra margins */
+    flex: none;           /* override flex:1 on desktop */
+    text-align: center;   /* keep text centered within its own block */
+  }
+
+  /* Ensure the photo and toggle stay at ends */
+  #profile-photo, 
+  #menu-toggle {
+    position: relative;  /* back to normal flow but at edges */
+    z-index: 1;          /* above the author name if overlapping */
+  }
 }
