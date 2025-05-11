@@ -160,7 +160,7 @@ footer p + p {
   #author-name {
     flex: none;
     position: absolute;
-    left: 50%;
+    left: 20%;
     transform: translateX(-50%);
   }
   /* Ensure photo and nav sit in the normal flex flow */
