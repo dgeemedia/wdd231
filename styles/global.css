@@ -159,8 +159,8 @@ footer p + p {
   /* Make author name not flex-grow so it truly centers */
   #author-name {
     flex: none;
-    position: absolute;
-    left: 20%;
+    position: relative;
+    left: 10%;
     transform: translateX(-50%);
   }
   /* Ensure photo and nav sit in the normal flex flow */
@@ -171,7 +171,8 @@ footer p + p {
 
   /* Always show nav inline */
   #primary-nav {
-    display: block;
+    display: flex;
+    flex-direction: column;
     background: none;
     width: auto;
   }
