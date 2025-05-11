@@ -1,9 +1,9 @@
-/* MOBILE-FIRST (Default) */
+/* ========== MOBILE-FIRST (Default) ========== */
 
-/* BODY & TYPE – unchanged */
+/* BODY & TYPE */
 body {
-  font-family: 'Poppins', sans-serif;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
   background: #f7f7f7;
   color: #222;
   line-height: 1.5;
@@ -17,34 +17,41 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  position: relative;
 }
 #profile-photo {
-  width: 60px; height: 60px;
-  border-radius: 50%; border: 3px solid #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #fff;
 }
 #author-name {
-  flex: 1; text-align: center;
-  font-size: 1.2rem; font-weight: bold;
+  flex: 1;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 #menu-toggle {
-  background: none; border: none;
-  color: #fff; font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
   cursor: pointer;
 }
 
-/* ===== MOBILE NAV – VERTICAL DROPDOWN IN FLOW ===== */
+/* MOBILE NAV (IN-FLOW DROPDOWN) */
 #primary-nav {
-  display: none;   /* hidden by default on mobile */
+  display: none;          /* hidden by default */
   width: 100%;
   background: #184e77;
 }
 #primary-nav.show {
-  display: block;  /* when toggled, nav appears and pushes content down */
+  display: block;         /* shows and pushes content down */
 }
 #primary-nav ul {
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 #primary-nav li {
   border-bottom: 1px solid rgba(255,255,255,0.2);
@@ -58,14 +65,13 @@ header {
   color: #fff;
 }
 
-/* HOME GRID – can stay horizontal scroll or grid as you wish */
+/* HOME GRID (HORIZONTAL SCROLL ON MOBILE) */
 .home-grid {
   display: flex;
   gap: 1rem;
   overflow-x: auto;
   padding: 1rem 0;
 }
-
 #course-work,
 .location {
   flex: 0 0 80%;
@@ -108,14 +114,13 @@ header {
 
 /* COURSE CARDS (HORIZONTAL SCROLL ON MOBILE) */
 #course-cards {
-  display: flex;            /* switch back to flex row */
-  flex-wrap: nowrap;
+  display: flex;
   gap: 1rem;
   overflow-x: auto;
   padding: 1rem 0;
 }
 .course-card {
-  flex: 0 0 70%;            /* each card takes 70% of container width */
+  flex: 0 0 70%;
   background: #fff;
   padding: 1rem;
   border-radius: 6px;
@@ -126,7 +131,6 @@ header {
   background: #9b2226;
   color: #fff;
 }
-
 
 /* FOOTER */
 footer {
@@ -140,18 +144,36 @@ footer p + p {
   margin-top: .5rem;
 }
 
-/* 2) DESKTOP OVERRIDES */
+/* ========== DESKTOP OVERRIDES (≥768px) ========== */
 @media (min-width: 768px) {
-  /* Hide the mobile toggle */
+  /* Hide mobile toggle */
   #menu-toggle {
     display: none;
   }
 
-  /* Show nav inline and in flow */
+  /* Inline header layout: photo left, name center, nav right */
+  header {
+    justify-content: space-between;
+    /* no position change needed; flex handles arrangement */
+  }
+  /* Make author name not flex-grow so it truly centers */
+  #author-name {
+    flex: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /* Ensure photo and nav sit in the normal flex flow */
+  #profile-photo,
   #primary-nav {
-    display: block !important;
-    position: static;
+    position: relative;
+  }
+
+  /* Always show nav inline */
+  #primary-nav {
+    display: block;
     background: none;
+    width: auto;
   }
   #primary-nav ul {
     display: flex;
@@ -162,7 +184,7 @@ footer p + p {
     border: none;
   }
   #primary-nav li a {
-    padding: 0.5rem 1rem;
+    padding: .5rem 1rem;
   }
 
   /* Two-column home grid */
@@ -180,25 +202,5 @@ footer p + p {
     gap: 1rem;
     overflow: visible;
     padding: 0;
-  }
-
-  header {
-    position: relative; /* ensure child absolute positioning is relative to header */
-  }
-  
-  #author-name {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;            /* remove any extra margins */
-    flex: none;           /* override flex:1 on desktop */
-    text-align: center;   /* keep text centered within its own block */
-  }
-
-  /* Ensure the photo and toggle stay at ends */
-  #profile-photo, 
-  #menu-toggle {
-    position: relative;  /* back to normal flow but at edges */
-    z-index: 1;          /* above the author name if overlapping */
   }
 }
