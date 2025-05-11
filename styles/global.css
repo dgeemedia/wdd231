@@ -37,27 +37,43 @@ header {
   cursor: pointer;
 }
 
-/* NAV (HIDDEN BY DEFAULT) */
-#primary-nav ul {
-  display: none;               /* hide nav on mobile */
-  list-style: none;
-  padding: 0.5rem 1rem;
+/* ===== MOBILE NAV – VERTICAL DROP-DOWN ===== */
+#primary-nav {
+  display: none;              /* hide entire nav by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
   background: #184e77;
-  gap: 0.5rem;
-  overflow-x: auto;
-  flex-wrap: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 10;
 }
-#primary-nav.show ul {
-  display: flex;               /* show nav when .show class is on nav */
+
+#primary-nav.show {
+  display: block;             /* show nav container when toggled */
 }
+
+#primary-nav ul {
+  display: block;             /* vertical list */
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
 #primary-nav li {
-  flex: 0 0 auto;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
+
+#primary-nav li:last-child {
+  border-bottom: none;
+}
+
 #primary-nav li a {
+  display: block;
   padding: 0.75rem 1rem;
-  white-space: nowrap;
   color: #fff;
 }
+
 
 /* HOME GRID (HORIZONTAL SCROLL) */
 .home-grid {
