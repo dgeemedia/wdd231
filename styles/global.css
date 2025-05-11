@@ -1,12 +1,12 @@
-/* 1) MOBILE-FIRST */
+/* MOBILE-FIRST (Default) */
 
-/* BODY */
+/* BODY & TYPE – unchanged */
 body {
   font-family: 'Poppins', sans-serif;
+  margin: 0;
   background: #f7f7f7;
   color: #222;
   line-height: 1.5;
-  margin: 0;
 }
 
 /* HEADER */
@@ -20,68 +20,52 @@ header {
 }
 #profile-photo {
   width: 60px; height: 60px;
-  border-radius: 50%;
-  border: 3px solid #fff;
+  border-radius: 50%; border: 3px solid #fff;
 }
 #author-name {
-  flex: 1;
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: bold;
+  flex: 1; text-align: center;
+  font-size: 1.2rem; font-weight: bold;
 }
 #menu-toggle {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.8rem;
+  background: none; border: none;
+  color: #fff; font-size: 1.8rem;
   cursor: pointer;
 }
 
-/* ===== MOBILE NAV – VERTICAL DROP-DOWN ===== */
+/* ===== MOBILE NAV – VERTICAL DROPDOWN IN FLOW ===== */
 #primary-nav {
-  display: none;              /* hide entire nav by default */
-  position: absolute;
-  top: 100%;
-  left: 0;
+  display: none;   /* hidden by default on mobile */
   width: 100%;
   background: #184e77;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  z-index: 10;
 }
-
 #primary-nav.show {
-  display: block;             /* show nav container when toggled */
+  display: block;  /* when toggled, nav appears and pushes content down */
 }
-
 #primary-nav ul {
-  display: block;             /* vertical list */
   list-style: none;
   margin: 0;
-  padding: 0.5rem 0;
+  padding: 0;
 }
-
 #primary-nav li {
   border-bottom: 1px solid rgba(255,255,255,0.2);
 }
-
 #primary-nav li:last-child {
   border-bottom: none;
 }
-
 #primary-nav li a {
   display: block;
   padding: 0.75rem 1rem;
   color: #fff;
 }
 
-
-/* HOME GRID (HORIZONTAL SCROLL) */
+/* HOME GRID – can stay horizontal scroll or grid as you wish */
 .home-grid {
   display: flex;
   gap: 1rem;
   overflow-x: auto;
   padding: 1rem 0;
 }
+
 #course-work,
 .location {
   flex: 0 0 80%;
@@ -158,24 +142,30 @@ footer p + p {
 
 /* 2) DESKTOP OVERRIDES */
 @media (min-width: 768px) {
-  /* hide mobile toggle */
+  /* Hide the mobile toggle */
   #menu-toggle {
     display: none;
   }
 
-  /* inline nav */
-  #primary-nav ul {
-    display: flex !important;
+  /* Show nav inline and in flow */
+  #primary-nav {
+    display: block !important;
     position: static;
     background: none;
-    overflow: visible;
+  }
+  #primary-nav ul {
+    display: flex;
+    gap: 1rem;
     padding: 0;
   }
+  #primary-nav li {
+    border: none;
+  }
   #primary-nav li a {
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
   }
 
-  /* two-column home grid */
+  /* Two-column home grid */
   .home-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -183,7 +173,7 @@ footer p + p {
     padding: 0;
   }
 
-  /* Three-column grid on desktop */
+  /* Three-column course cards */
   #course-cards {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr);
