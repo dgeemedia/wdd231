@@ -1,0 +1,178 @@
+/* 1) MOBILE-FIRST */
+
+/* BODY */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f7f7f7;
+  color: #222;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* HEADER */
+header {
+  background: #184e77;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+#profile-photo {
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+#author-name {
+  flex: 1;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#menu-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* NAV (HIDDEN BY DEFAULT) */
+#primary-nav ul {
+  display: none;               /* hide nav on mobile */
+  list-style: none;
+  padding: 0.5rem 1rem;
+  background: #184e77;
+  gap: 0.5rem;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+#primary-nav.show ul {
+  display: flex;               /* show nav when .show class is on nav */
+}
+#primary-nav li {
+  flex: 0 0 auto;
+}
+#primary-nav li a {
+  padding: 0.75rem 1rem;
+  white-space: nowrap;
+  color: #fff;
+}
+
+/* HOME GRID (HORIZONTAL SCROLL) */
+.home-grid {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+#course-work,
+.location {
+  flex: 0 0 80%;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+.location img {
+  width: 100%;
+  border-radius: 4px;
+  margin-top: .5rem;
+}
+
+/* CERTIFICATE SECTION */
+#certificate {
+  margin: 2rem 0;
+}
+#certificate h2 {
+  margin-bottom: .5rem;
+  color: #184e77;
+}
+.filter-controls {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.filter-controls button {
+  margin: 0 .3rem;
+  padding: .5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background: #184e77;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s;
+}
+.filter-controls button.active {
+  background: #023e8a;
+}
+
+/* COURSE CARDS (HORIZONTAL SCROLL ON MOBILE) */
+#course-cards {
+  display: flex;            /* switch back to flex row */
+  flex-wrap: nowrap;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+.course-card {
+  flex: 0 0 70%;            /* each card takes 70% of container width */
+  background: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.course-card.done {
+  background: #9b2226;
+  color: #fff;
+}
+
+
+/* FOOTER */
+footer {
+  background: #184e77;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: .9rem;
+}
+footer p + p {
+  margin-top: .5rem;
+}
+
+/* 2) DESKTOP OVERRIDES */
+@media (min-width: 768px) {
+  /* hide mobile toggle */
+  #menu-toggle {
+    display: none;
+  }
+
+  /* inline nav */
+  #primary-nav ul {
+    display: flex !important;
+    position: static;
+    background: none;
+    overflow: visible;
+    padding: 0;
+  }
+  #primary-nav li a {
+    padding: .5rem 1rem;
+  }
+
+  /* two-column home grid */
+  .home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: visible;
+    padding: 0;
+  }
+
+  /* Three-column grid on desktop */
+  #course-cards {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    overflow: visible;
+    padding: 0;
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>Lucky George Olumah – Home</title>
+  <meta name="description" content="Web & Computer Programming Certificate">
+  <meta name="author" content="Lucky George Olumah">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/global.css">
+  <script src="scripts/global.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <img id="profile-photo" src="images/profile.jpg" alt="Profile photo">
+    <span id="author-name">Lucky George Olumah</span>
+    <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <nav id="primary-nav">
+      <ul>
+        <li><a href="index.html" class="current">Home</a></li>
+        <li><a href="chamber.html">Chamber</a></li>
+        <li><a href="final.html">Final</a></li>
+        <li><a href="https://github.com/dgeemedia/" target="_blank" aria-label="GitHub">GitHub Profile</a></li>
+        <li><a href="https://www.linkedin.com/in/lucky-george-olumah-58621870/" target="_blank" aria-label="LinkedIn">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <div class="home-grid">
+      <section id="course-work">
+        <h2>Course Work</h2>
+        <ul>
+          <li>…</li>
+          <li>…</li>
+        </ul>
+      </section>
+
+      <section class="location">
+        <h2>Lagos, Nigeria</h2>
+        <img src="images/nigeria.webp" alt="Nigeria Forest">
+        <p>Nigeria Forest</p>
+      </section>
+    </div>
+
+    <section id="certificate">
+      <h2>Web &amp; Computer Programming Certificate</h2>
+      <div class="filter-controls">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="CSE">CSE</button>
+        <button data-filter="WDD">WDD</button>
+      </div>
+      <div id="course-cards"></div>
+      <p id="credit-total"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="current-year"></span> Lucky George Olumah • Nigeria 🌍</p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>

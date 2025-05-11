@@ -1,0 +1,59 @@
+/* large.css */
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  #author-name {
+    font-size: 2rem;
+  }
+
+  #primary-nav ul {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    gap: 1rem;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  #primary-nav li {
+    margin: 0;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  main {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  #course-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  section#showcase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  section#showcase img {
+    width: 300px;
+  }
+
+  main > section.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
