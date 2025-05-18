@@ -1,0 +1,19 @@
+@media (min-width: 768px) {
+
+    #myButton {
+        display: none;
+    }
+
+    ul.menuLinks, ul.menuLinks.open {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    ul.menuLinks a:hover {
+        color: orange;
+    }
+
+    nav {
+        grid-template-rows: 1fr;
+    }
+} /* end media query */
