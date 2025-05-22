@@ -1,0 +1,297 @@
+:root {
+	--primary-color: #5ca1ef;   
+	--secondary-color: #f19101be; 
+	--bg-color: #ffffff;        
+	--text-color: #333;
+	--font-heading: 'Poppins', sans-serif;
+	--font-body: 'Roboto', sans-serif;
+  }
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: bisque;
+}
+
+h1 {
+	background-color: var(--primary-color);
+	color: #333;
+	padding: 1rem;
+	text-align: center;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: bisque;
+	padding: 1rem;
+	flex-wrap: wrap;
+  }
+  
+  .branding {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+  }
+  
+  .logo {
+	width: 50px;
+	height: auto;
+  }
+  
+  nav ul {
+	list-style: none;
+	display: flex;
+	gap: 1rem;
+  }
+  
+  nav a {
+	transition: color 0.2s ease, text-decoration 0.2s ease;
+  }
+  nav a:hover,
+  nav a:focus {
+	color: var(--secondary-color);
+	text-decoration: none;
+  }
+  
+  button:focus, a:focus { outline: 2px dashed var(--primary-color); outline-offset: 2px; }
+
+  nav button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 1.2rem;
+  }
+  
+  
+  #menu-button {
+	display: none;
+	font-size: 1.5rem;
+	background: none;
+	border: none;
+	cursor: pointer;
+  }
+
+  #menu-button::before {
+	content: "\2630";       /* ☰ */
+  }
+  #menu-button.open::before {
+	content: "×";           /* ✕ */
+  }
+  
+  .mobile-nav {
+	display: none;
+	flex-direction: column;
+	gap: 0.5rem;
+	background-color: bisque;
+	padding: 1rem;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height .3s;
+  }
+  
+  .mobile-nav a {
+	padding: 0.5rem;
+	border-bottom: 1px solid #ccc;
+  }
+  
+  .hidden {
+	display: none;
+  }
+  
+  .mobile-nav.open {
+	max-height: 300px; /* Adjust based on content */
+  }
+
+/* Responsive */
+@media (max-width: 768px) {
+	.desktop-nav {
+	  display: none;
+	}
+  
+	#menu-button {
+	  display: block;
+	}
+  
+	.mobile-nav {
+	  display: flex;
+	}
+  
+	nav ul {
+	  flex-direction: column;
+	  align-items: flex-end;
+	}
+  
+	.footer-container {
+	  align-items: center;
+	  padding: 1rem;
+	  text-align: center;
+	  gap: 2rem;
+	}
+  
+	.footer-left,
+	.footer-center,
+	.footer-right {
+	  text-align: center;
+	  align-items: center;
+	}
+  }
+  
+
+/* MAIN LAYOUT*/
+
+main {
+	margin: 0 auto;
+	padding: 0.5rem;
+	max-width: 700px;
+	background-color: bisque;
+	font-family: var(--font-body)
+}
+
+.menu {
+	margin: 1rem auto;
+	border: 1px solid rgb(0 0 0 / 0.1);
+	padding: 0.5rem;
+	background-color: #333;
+	text-align: center;
+}
+
+.menu button {
+	padding: 1rem;
+	font-weight: 700;
+}
+
+section {
+	border: 1px solid rgba(29, 110, 232, 0.1);
+	padding: 0.5rem;
+	background-color: var(--secondary-color);
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 5px;
+	align-items: center;
+}
+
+.grid section {
+	text-align: center;
+}
+
+.grid img {
+	border: 1px solid #fff;
+	box-shadow: 0 0 1rem var(--primary-color);
+}
+
+.grid section > * {
+	margin: 0.1rem;
+}
+
+.grid h3 {
+	font-size: 1.2rem;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+}
+
+.list section {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	margin: 0;
+	padding: 0.25rem;
+}
+
+.list section > * {
+	margin: 0 1rem;
+}
+
+.list section img {
+	display: grid; /* smaller viewports only */
+}
+
+.list section h3 {
+	font-size: 1rem;
+}
+
+.list section:nth-child(even) {
+	background-color: #bbb;
+}
+
+section h3 {
+	font-size: 1.5rem;
+}
+
+section a {
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.85rem;
+	color: navy;
+}
+
+img {
+	width: auto;
+	height: 75px;
+}
+
+
+/* Footer Layout */
+footer {
+	background-color: bisque;
+	padding: 2rem;
+	font-size: 0.9rem;
+	color: #333;
+  }
+  
+  .footer-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 1rem;
+	max-width: 1200px;
+	margin: auto;
+  }
+  
+  .footer-left,
+  .footer-center,
+  .footer-right {
+	flex: 1;
+	min-width: 250px;
+  }
+  
+  .footer-center {
+	text-align: center;
+  }
+  
+  .footer-right {
+	text-align: right;
+  }
+  
+  footer a {
+	color: #333;
+	text-decoration: none;
+  }
+  
+  footer a:hover {
+	text-decoration: underline;
+  }
+  
+  .socials a {
+	font-size: 1.5rem;
+	margin: 0 0.5rem;
+	color: #444;
+	transition: transform 0.3s;
+  }
+  
+  .socials a:hover {
+	transform: scale(1.2);
+	color: #0077b5;
+  }
+
+ 

@@ -14,38 +14,81 @@
   <meta property="og:url"         content="https://dgeemedia.github.io/wdd231/chamber/directory.html">
   <meta property="og:type"        content="website">
 
-  <link rel="stylesheet" href="css/small.css">
-  <link rel="stylesheet" href="css/large.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/nav.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/directory.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="js/directory.js" defer></script>
 </head>
 <body>
     <header>
-        <img src="images/logo.png" width="34" height="40">
-        <span>ListNest Chamber of Commerce</span>
-        <button id="myButton"></button>
-    </header>
+        <div class="branding">
+          <img src="images/logo.png" alt="ListNest Logo" class="logo">
+          <p>Chamber of Commerce</p>
+        </div>
     
-    <nav id="animateme">
-        
-        <ul class="menuLinks">
-            <li><a href="#" title="Home">Home</a></li>
-            <li class="current-menu-item"><a href="#">Directory</a></li>
-            <li><a href="#" title="Join">Join</a></li>
-            <li><a href="#" title="Discover">Discover🌗</a></li>
-        </ul>
-    </nav>
+        <button id="menu-button" aria-label="Menu"></button>
+    
+        <nav class="desktop-nav">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover🌗</a></li>
+          </ul>
+        </nav>
+    
+        <nav id="nav-menu" class="mobile-nav hidden">
+          <a href="index.html">Home</a>
+          <a href="directory.html">Directory</a>
+          <a href="join.html">Join</a>
+          <a href="discover.html">Discover</a>
+        </nav>
+      </header>
     <main>
         <h1>ListNest Directory</h1>
-        
         <div class="menu">
-            <button id="grid">⏹️ Grid View</button>
-            <button id="list">📄 List View</button>
+            <button id="grid">⏹️ Grid</button>
+            <button id="list">📄 List</button>
         </div>
-        
-            <div id="directory" class="grid"></div>
-    </main>
-        
-    <script src="js/directory.js"></script>
+
+        <div id="directory" class="grid"></div>
+
+    </main> 
+    <footer>
+        <div class="footer-container">
+          <div class="footer-left">
+            <p><strong>ListNest Chamber of Commerce</strong></p>
+            <p>10, Magbon Badagry</p>
+            <p>Lagos, Nigeria 234</p>
+            <p><a href="mailto:info@listnest.org">info@listnest.org</a></p>
+            <p><a href="tel:+2345552300">(234) 806-5104250</a></p>
+          </div>
+      
+          <div class="footer-center socials">
+            <a href="https://web.facebook.com/olumahbaba1" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/dgeemedia/" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/lucky-george-olumah-58621870/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/dgeemedia/" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+      
+          <div class="footer-right">
+            <p><strong>WDD231 Class Project</strong></p>
+              <p>Lucky George Olumah</p>
+              <p>&copy; 2025 ListNest Chamber of Commerce</p>
+              <p>Last Modified: <span id="mod-date"></span></p>
+          </div>
+        </div>
+      </footer>
 </body>
 </html>

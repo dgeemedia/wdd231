@@ -1,38 +1,11 @@
 [
     {
-      "name": "Sujimoto Group",
-      "address": "14B Milverton Road, Ikoyi, Lagos, Nigeria.",
-      "phone": "08098521646",
-      "website": "https://sujimotonig.com/",
-      "logo": "sujimoto.png",
-      "level": 3,
-      "tagline": "Redefining Luxury Living"
-    },
-    {
       "name": "Revolution Plus Property Ltd",
       "address": "RevolutionPlus House, 1 Olufunmilola Okikiolu Street, Off Toyin Street, Ikeja, Lagos, Nigeria.",
       "phone": "08036938554",
       "website": "https://revolutionplusproperty.com/",
       "logo": "revolutionplus.png",
-      "level": 2,
-      "tagline": "The Future Belongs to those who prepare"
-    },
-    {
-      "name": "Adron Homes and Property Limited",
-      "address": "75, Adron Court, Adeyemo Akapo, Omole Phase 1, Lagos, Nigeria.",
-      "phone": "08051011951",
-      "website": "https://adronhomesproperties.com/",
-      "logo": "adron.png",
       "level": 1,
-      "tagline": "Find your perfect home"
-    },
-    {
-      "name": "Revolution Plus Property Ltd",
-      "address": "RevolutionPlus House, 1 Olufunmilola Okikiolu Street, Off Toyin Street, Ikeja, Lagos, Nigeria.",
-      "phone": "08036938554",
-      "website": "https://revolutionplusproperty.com/",
-      "logo": "revolutionplus.png",
-      "level": 2,
       "tagline": "The Future Belongs to those who prepare"
     },
     {
@@ -50,7 +23,7 @@
       "phone": "08036938554",
       "website": "https://revolutionplusproperty.com/",
       "logo": "revolutionplus.png",
-      "level": 2,
+      "level": 3,
       "tagline": "The Future Belongs to those who prepare"
     },
     {
@@ -68,8 +41,36 @@
       "phone": "08036938554",
       "website": "https://revolutionplusproperty.com/",
       "logo": "revolutionplus.png",
+      "level": 3,
+      "tagline": "The Future Belongs to those who prepare"
+    },
+    {
+      "name": "Revolution Plus Property Ltd",
+      "address": "RevolutionPlus House, 1 Olufunmilola Okikiolu Street, Off Toyin Street, Ikeja, Lagos, Nigeria.",
+      "phone": "08036938554",
+      "website": "https://revolutionplusproperty.com/",
+      "logo": "revolutionplus.png",
+      "level": 1,
+      "tagline": "The Future Belongs to those who prepare"
+    },
+    {
+      "name": "Revolution Plus Property Ltd",
+      "address": "RevolutionPlus House, 1 Olufunmilola Okikiolu Street, Off Toyin Street, Ikeja, Lagos, Nigeria.",
+      "phone": "08036938554",
+      "website": "https://revolutionplusproperty.com/",
+      "logo": "revolutionplus.png",
       "level": 2,
+      "tagline": "The Future Belongs to those who prepare"
+    },
+    {
+      "name": "Revolution Plus Property Ltd",
+      "address": "RevolutionPlus House, 1 Olufunmilola Okikiolu Street, Off Toyin Street, Ikeja, Lagos, Nigeria.",
+      "phone": "08036938554",
+      "website": "https://revolutionplusproperty.com/",
+      "logo": "revolutionplus.png",
+      "level": 3,
       "tagline": "The Future Belongs to those who prepare"
     }
   ]
+
   
