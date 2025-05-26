@@ -124,33 +124,12 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.8);
+  background: none;
   padding: 1rem 2rem;
   text-align: center;
   border-radius: 8px;
   z-index: 2;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.hero-text h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  font-family: var(--font-heading);
-}
-
-.hero-text p {
-  font-size: 1rem;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }
 
 /* Main Layout */
@@ -319,14 +298,6 @@ footer {
     text-align: center;
   }
 
-  .hero-text h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero-text p {
-    font-size: 0.9rem;
-  }
-
   .spotlight-container {
     flex-direction: column;
     align-items: center;
@@ -345,7 +316,7 @@ footer {
     display: inline-block;
     background: #333;
     color: bisque;
-    padding: 8px 12px;
+    padding: 10px 15px;
     border: none;
     border-radius: 5px;
     text-decoration: none;

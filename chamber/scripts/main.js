@@ -43,6 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const joinBtn = document.createElement('a');
       joinBtn.href = "join.html";
       joinBtn.className = "btn";
-      joinBtn.textContent = "Join Us";
+      joinBtn.textContent = "👉Click here to Join Us";
       heroButtonContainer.appendChild(joinBtn);
     }
