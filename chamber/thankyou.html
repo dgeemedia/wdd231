@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ListNest Chamber of Commerce">
+  <meta name="author" content="Lucky George Olumah">
+  <title>WDD 231 Class Project - ListNest Chamber of Commerce</title>
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="ListNest Chamber of Commerce">
+  <meta property="og:description" content="ListNest is a digital platform that connects local businesses and communities through an organized directory system, offering chamber of commerce updates, business listings, and a user-friendly experience designed to promote visibility and growth.">
+  <meta property="og:image" content="https://github.com/dgeemedia/wdd231/blob/main/chamber/images/ListNest.png">
+  <meta property="og:url" content="https://dgeemedia.github.io/wdd231/chamber/directory.html">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+
+  <!-- Styles & Scripts -->
+  <link rel="stylesheet" href="styles/join.css">
+
+</head>
+<body>
+    <header>
+        <div class="branding">
+          <img src="images/logo.png" alt="ListNest Logo" class="logo">
+          <p>Chamber of Commerce</p>
+        </div>
+    
+        <button id="menu-button" aria-label="Menu"></button>
+    
+        <nav class="desktop-nav">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover🌗</a></li>
+          </ul>
+        </nav>
+    
+        <nav id="nav-menu" class="mobile-nav hidden">
+          <a href="index.html">Home</a>
+          <a href="directory.html">Directory</a>
+          <a href="join.html">Join</a>
+          <a href="discover.html">Discover</a>
+        </nav>
+    </header>
+
+  <main>
+    <h1>Thank You for Joining!</h1>
+    <p>We're excited to welcome you to the chamber. Here is the information you submitted:</p>
+    <div class="thankyou-data" id="thankyou-data"></div>
+  </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <p><strong>ListNest Chamber of Commerce</strong></p>
+          <p>10, Magbon Badagry</p>
+          <p>Lagos, Nigeria 234</p>
+          <p><a href="mailto:info@listnest.org">info@listnest.org</a></p>
+          <p><a href="tel:+2345552300">(234) 806-5104250</a></p>
+        </div>
+    
+        <div class="footer-center socials">
+          <a href="https://web.facebook.com/olumahbaba1" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/dgeemedia/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/lucky-george-olumah-58621870/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/dgeemedia/" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+    
+        <div class="footer-right">
+          <p><strong>WDD231 Class Project</strong></p>
+            <p>Lucky George Olumah</p>
+            <p>&copy; 2025 ListNest Chamber of Commerce</p>
+            <p>Last Modified: <span id="mod-date"></span></p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="scripts/thankyou.js"></script>
+
+</body>
+</html>

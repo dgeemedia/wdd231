@@ -1,0 +1,325 @@
+:root {
+  --primary-color: #5ca1ef;
+  --secondary-color: #f19101be;
+  --bg-color: #ffffff;
+  --text-color: #333;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: bisque;
+  font-family: var(--font-body);
+  color: var(--text-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: bisque;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.desktop-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.desktop-nav a,
+.mobile-nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.desktop-nav a:hover,
+.mobile-nav a:hover {
+  color: var(--secondary-color);
+}
+
+#menu-button {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#menu-button::before {
+  content: "\2630"; /* ☰ */
+}
+
+#menu-button.open::before {
+  content: "×"; /* ✕ */
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: bisque;
+  padding: 1rem;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+.mobile-nav.open {
+  max-height: 300px;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+    text-align: center;
+    color: #0077b5;
+}
+
+p {
+    text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: bisque;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+.socials a {
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  color: #444;
+  transition: transform 0.3s;
+}
+
+.socials a:hover {
+  transform: scale(1.2);
+  color: #0077b5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  #menu-button {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+    .join-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .membership-cards {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* Join Container Layout */
+.join-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.join-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: #fff8f0;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.join-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #333;
+}
+
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="tel"],
+.join-form textarea,
+.join-form select {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-top: 0.25rem;
+  background-color: #fff;
+}
+
+.join-form input[type="submit"] {
+  background-color: #0077b5;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.join-form input[type="submit"]:hover {
+  background-color: #005b8e;
+}
+
+/* -------------------------------
+   THANK YOU PAGE STYLING
+-------------------------------- */
+.thankyou-data {
+  background-color: #fdf6ee;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 2rem auto;
+  animation: fadeIn 1s ease-in-out;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* -------------------------------
+   CARD ANIMATION (MEMBERSHIP CARDS)
+-------------------------------- */
+.membership-cards .card {
+  background-color: #fff8f1;
+  border: 1px solid #e0cfc0;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+/* Membership Cards Section (already animated) */
+.membership-cards {
+  flex: 1;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.membership-cards .card.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* -------------------------------
+   DIALOG / MODAL STYLING
+-------------------------------- */
+dialog {
+  border: 2px solid #d4a373;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background-color: #fff;
+  box-shadow: 0 0 2rem rgba(0,0,0,0.4);
+  max-width: 500px;
+  width: 90%;
+  animation: scaleUp 0.3s ease-in-out;
+  position: relative;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Close button inside dialog */
+dialog button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  background: #ffdad5;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+dialog button:hover {
+  background: #ffc0b8;
+}
+
+/* -------------------------------
+   ANIMATIONS
+-------------------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
