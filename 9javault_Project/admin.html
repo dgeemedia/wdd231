@@ -1,0 +1,81 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard – 9jaVault</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <nav class="admin-nav">
+    <ul>
+      <li><a href="#banks">Banks</a></li>
+      <li><a href="#rates">Rates</a></li>
+      <li><a href="#users">Users</a></li>
+    </ul>
+  </nav>
+
+  <main class="admin-main">
+    <!-- Manage Banks -->
+    <section id="banks">
+      <h2>Manage Banks</h2>
+      <form id="bank-form">
+        <div class="form-group">
+          <label for="bank-name">New Bank Name:</label>
+          <input type="text" id="bank-name">
+        </div>
+        <button type="submit" class="btn">Add Bank</button>
+      </form>
+      <table>
+        <thead>
+          <tr><th>Bank</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>First Bank</td><td><button>Edit</button> <button>Delete</button></td></tr>
+          <tr><td>Zenith Bank</td><td><button>Edit</button> <button>Delete</button></td></tr>
+          <!-- ... -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Manage Rates -->
+    <section id="rates">
+      <h2>Update Interest Rates</h2>
+      <table>
+        <thead>
+          <tr><th>Bank</th><th>30-Day</th><th>90-Day</th><th>180-Day</th><th>365-Day</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>First Bank</td>
+            <td><input type="text" value="10.0%"></td>
+            <td><input type="text" value="10.5%"></td>
+            <td><input type="text" value="11.0%"></td>
+            <td><input type="text" value="11.5%"></td>
+          </tr>
+          <!-- More banks... -->
+        </tbody>
+      </table>
+      <button class="btn">Save Rates</button>
+    </section>
+
+    <!-- Manage Users -->
+    <section id="users">
+      <h2>Manage Users</h2>
+      <table>
+        <thead>
+          <tr><th>Email</th><th>Plan</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>user1@example.com</td><td>Basic</td><td><button>Edit</button> <button>Delete</button></td></tr>
+          <tr><td>user2@example.com</td><td>Premium</td><td><button>Edit</button> <button>Delete</button></td></tr>
+          <!-- ... -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>

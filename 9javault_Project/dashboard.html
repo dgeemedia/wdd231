@@ -1,0 +1,64 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Dashboard – 9jaVault</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="plan-basic">
+  <nav class="navbar">
+    <div class="logo">9jaVault</div>
+    <button class="hamburger">&#9776;</button>
+    <div class="nav-links">
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="upgrade.html">Upgrade</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="dashboard">
+    <h2>Welcome, [User]</h2>
+    <p>Your Plan: Basic (Free)</p>
+    <div class="upgrade-prompt">
+      <p><strong>Limited Access:</strong> Upgrade to Premium for 30/90/180-day rates.</p>
+      <a href="upgrade.html" class="btn">Upgrade Now</a>
+    </div>
+
+    <h3>Daily Interest Rates</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Bank</th>
+          <th class="premium-col">30-Day</th>
+          <th class="premium-col">90-Day</th>
+          <th class="premium-col">180-Day</th>
+          <th>365-Day</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>First Bank</td>
+          <td class="premium-col">10.0%</td>
+          <td class="premium-col">10.5%</td>
+          <td class="premium-col">11.0%</td>
+          <td>11.5%</td>
+        </tr>
+        <tr>
+          <td>Zenith Bank</td>
+          <td class="premium-col">9.8%</td>
+          <td class="premium-col">10.3%</td>
+          <td class="premium-col">10.9%</td>
+          <td>11.2%</td>
+        </tr>
+        <!-- More banks... -->
+      </tbody>
+    </table>
+  </main>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>

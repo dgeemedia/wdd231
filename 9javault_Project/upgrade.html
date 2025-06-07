@@ -1,0 +1,41 @@
+<!-- upgrade.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upgrade Plan – 9jaVault</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">9jaVault</div>
+    <button class="hamburger">&#9776;</button>
+    <div class="nav-links">
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="upgrade.html">Upgrade</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="upgrade-page">
+    <h2>Upgrade to Premium</h2>
+    <form id="upgrade-form">
+      <div class="plan-options">
+        <label>
+          <input type="radio" name="plan" value="monthly" checked> Monthly – ₦1,000
+        </label>
+        <label>
+          <input type="radio" name="plan" value="annual"> Annual – ₦10,000 (save 20%)
+        </label>
+      </div>
+      <button type="submit" class="btn">Proceed to Payment</button>
+    </form>
+    <p><a href="dashboard.html">Back to Dashboard</a></p>
+  </main>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
