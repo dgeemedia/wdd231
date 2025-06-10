@@ -102,124 +102,78 @@ p {
     text-align: center;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .desktop-nav {
-    display: none;
-  }
+/* MAIN LAYOUT */
 
-  #menu-button {
-    display: block;
-  }
+.discover-section {
+  padding: 2rem;
+  background: #f9f9f9;
+}
 
-  .mobile-nav {
-    display: flex;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
+.discover-section h2{
     text-align: center;
-  }
-  }
-  
-
-/* MAIN LAYOUT*/
-
-main {
-	margin: 0 auto;
-	padding: 0.5rem;
-	max-width: 700px;
-	background-color: bisque;
-	font-family: var(--font-body)
+    color: #0077b5;
 }
 
-.menu {
-	margin: 1rem auto;
-	border: 1px solid rgb(0 0 0 / 0.1);
-	padding: 0.5rem;
-	background-color: #333;
-	text-align: center;
+.discover-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
-.menu button {
-	padding: 1rem;
-	font-weight: 700;
+.place-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-section {
-	border: 1px solid rgba(29, 110, 232, 0.1);
-	padding: 0.5rem;
-	background-color: var(--secondary-color);
+/* Grid inside each card */
+.place-grid {
+  display: grid;
+  grid-template-areas:
+    "name"
+    "description"
+    "photo"
+    "address"
+    "cost";
+  gap: 0.5rem;
+  padding: 1rem;
 }
 
-.grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	grid-gap: 5px;
-	align-items: center;
+/* Assign each area */
+.place-name {
+  grid-area: name;
+  font-size: 1.2rem;
+  color: #0077b5;
+  text-align: center;
 }
 
-.grid section {
-	text-align: center;
+.place-img {
+  grid-area: photo;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
-.grid img {
-	border: 1px solid #fff;
-	box-shadow: 0 0 1rem var(--primary-color);
+.place-description {
+  grid-area: description;
+  font-size: 0.95rem;
 }
 
-.grid section > * {
-	margin: 0.1rem;
+.place-address {
+  grid-area: address;
+  font-size: 0.9rem;
+  color: #444;
 }
 
-.grid h3 {
-	font-size: 1.2rem;
+.place-cost {
+  grid-area: cost;
+  font-weight: bold;
+  color: #008000;
 }
-
-.list {
-	display: flex;
-	flex-direction: column;
-}
-
-.list section {
-	display: grid;
-	grid-template-columns: 2fr 1fr 1fr;
-	margin: 0;
-	padding: 0.25rem;
-}
-
-.list section > * {
-	margin: 0 1rem;
-}
-
-.list section img {
-	display: grid; /* smaller viewports only */
-}
-
-.list section h3 {
-	font-size: 1rem;
-}
-
-.list section:nth-child(even) {
-	background-color: #bbb;
-}
-
-section h3 {
-	font-size: 1.5rem;
-}
-
-section a {
-	font-family: 'Roboto', sans-serif;
-	font-size: 0.85rem;
-	color: navy;
-}
-
-img {
-	width: auto;
-	height: 75px;
-}
-
 
 /* Footer */
 footer {
@@ -253,4 +207,25 @@ footer {
   transform: scale(1.2);
   color: #0077b5;
 }
- 
+
+/* Responsive */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  #menu-button {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+}
