@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register - 9jaVault</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h2>Create Your 9jaVault Account</h2>
+  <form id="registerForm">
+    <input type="text" id="fullname" placeholder="Full Name" required />
+    <input type="tel" id="phone" placeholder="Phone Number" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <label>
+      <input type="checkbox" id="terms" required /> I agree to the
+      <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.
+    </label>
+    <button type="submit">Register</button>
+  </form>
+  <p id="registerError" style="color:red;"></p>
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const fullname = document.getElementById("fullname").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+      const terms = document.getElementById("terms").checked;
+
+      if (!terms) {
+        document.getElementById("registerError").textContent = "You must agree to the Terms and Privacy Policy.";
+        return;
+      }
+
+      const user = { fullname, phone, email, password, membership: "Basic" };
+      const users = JSON.parse(localStorage.getItem("users")) || [];
+      users.push(user);
+      localStorage.setItem("users", JSON.stringify(users));
+      localStorage.setItem("currentUser", JSON.stringify(user));
+      window.location.href = "register-success.html";
+    });
+  </script>
+</body>
+</html>

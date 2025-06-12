@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Success - 9jaVault</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="successMessage"></div>
+
+  <!-- Modal for membership plan -->
+  <div id="membershipModal">
+    <h2>Welcome to 9jaVault!</h2>
+    <p>Thank you for registering. You are automatically enrolled in our <strong>Basic</strong> membership plan.</p>
+    <p>Plan Benefits:</p>
+    <ul>
+      <li>✔ Access to daily bank rate updates</li>
+      <li>✔ Compare treasury bill returns</li>
+      <li>✔ Track basic investments</li>
+    </ul>
+    <p>Redirecting to dashboard in <span id="countdown">5</span> seconds...</p>
+  </div>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem("currentUser"));
+    if (!user) location.href = "login.html";
+
+    document.getElementById("successMessage").innerHTML = `
+      <h3>Hi, ${user.fullname}!</h3>
+      <p>Your registration was successful.</p>
+    `;
+
+    let count = 5;
+    const interval = setInterval(() => {
+      document.getElementById("countdown").textContent = --count;
+      if (count === 0) {
+        clearInterval(interval);
+        window.location.href = "dashboard.html";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

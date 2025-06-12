@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9jaVault - Compare & Invest</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to 9jaVault</h1>
+    <nav>
+      <button onclick="location.href='login.html'">Login</button>
+      <button onclick="location.href='register.html'">Register</button>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h2>Your gateway to smarter investments</h2>
+      <p>Compare treasury bills, fixed deposits, and more.</p>
+      <button onclick="location.href='dashboard.html'">Explore Now</button>
+    </section>
+  </main>
+  <script>
+    // If user is already logged in, show dashboard button instead
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (currentUser) {
+      document.querySelector("nav").innerHTML = `
+        <span>Hello, ${currentUser.fullname.split(' ')[0]}!</span>
+        <button onclick="location.href='dashboard.html'">Go to Dashboard</button>
+      `;
+    }
+  </script>
+</body>
+</html>

@@ -6,16 +6,26 @@
   <title>User Dashboard – 9jaVault</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/dashboard.css"
 </head>
 <body class="plan-basic">
+
+    <!-- Header / Navigation -->
   <nav class="navbar">
-    <div class="logo">9jaVault</div>
-    <button class="hamburger">&#9776;</button>
-    <div class="nav-links">
+
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="9jaVault Logo">
+    </a>
+
+    <div class="nav-mobile">
+    <button id="logout" class="btn btn-logout">Logout</button>
+    <button id="menu-toggle" aria-label="Toggle Menu"></button>
+    </div>
+
+    <div class="nav-links" id="nav-menu">
       <ul>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="upgrade.html">Upgrade</a></li>
-        <li><a href="login.html">Logout</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -59,6 +69,12 @@
     </table>
   </main>
 
+  <!-- Footer -->
+  <footer class="vault-footer">
+    <p>&copy; 2025 <strong>9jaVault</strong>. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/dashboard.js"></script>
   <script src="scripts/script.js"></script>
 </body>
 </html>

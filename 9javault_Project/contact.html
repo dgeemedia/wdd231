@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us – 9jaVault</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/contact.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="9jaVault Logo" />
+    </a>
+    <div class="nav-mobile">
+      <button id="menu-toggle" aria-label="Toggle Menu"></button>
+    </div>
+    <div class="nav-links" id="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="contact-page">
+    <section class="contact-form-section">
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you! Please fill out the form below.</p>
+<form id="contact-form">
+  <div class="form-group">
+    <label for="user-email">Your Email:</label>
+    <input type="email" id="user-email" name="email" required />
+  </div>
+  <div class="form-group">
+    <label for="user-message">Your Message:</label>
+    <textarea id="user-message" name="message" rows="5" required></textarea>
+  </div>
+  <button type="submit" class="btn">Send Message</button>
+</form>
+
+<!-- Message Display -->
+<div id="confirmation-message"></div>
+</section>
+
+    <section class="career-section">
+      <h2>Careers</h2>
+      <p>Join our mission to simplify investment decisions in Nigeria.</p>
+      <p>We're always looking for talented people. Send your CV to <a href="mailto:careers@9javault.com">careers@9javault.com</a>.</p>
+    </section>
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <h4>How do I register on 9jaVault?</h4>
+        <p>Click on the Register link in the top menu and fill in your details.</p>
+      </div>
+      <div class="faq">
+        <h4>Is there a cost to use the platform?</h4>
+        <p>We offer a free Basic plan. Premium plans give you more rate insights.</p>
+      </div>
+      <div class="faq">
+        <h4>Can I change my membership plan?</h4>
+        <p>Yes, visit the Upgrade page in your dashboard to change your plan.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="vault-footer">
+    <p>&copy; 2025 <strong>9jaVault</strong>. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/contact.js"></script>
+  <script src="scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard - 9jaVault</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h2 id="welcomeMsg">Welcome</h2>
+    <button onclick="logout()">Logout</button>
+  </header>
+  <main>
+    <section>
+      <h3>Your Membership Plan</h3>
+      <p id="membershipInfo"></p>
+    </section>
+  </main>
+  <script>
+    const user = JSON.parse(localStorage.getItem("currentUser"));
+    if (!user) location.href = "login.html";
+
+    document.getElementById("welcomeMsg").textContent = `Welcome, ${user.fullname}`;
+    document.getElementById("membershipInfo").innerHTML = `
+      You are currently on the <strong>${user.membership}</strong> membership plan.
+    `;
+
+    function logout() {
+      localStorage.removeItem("currentUser");
+      location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

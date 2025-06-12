@@ -1,0 +1,55 @@
+/* styles/contact.css */
+
+.contact-page {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.contact-page h2 {
+  color: #28a745;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-section,
+.career-section,
+.faq-section {
+  margin-bottom: 3rem;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.faq {
+  margin-bottom: 1rem;
+}
+
+.faq h4 {
+  margin: 0 0 0.3rem;
+  color: #333;
+}
+
+.faq p {
+  margin: 0;
+  color: #555;
+}
+
+#confirmation-message {
+    margin-top: 1rem; 
+    font-weight: bold; 
+    color: green;
+}
