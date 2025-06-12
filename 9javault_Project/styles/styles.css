@@ -12,7 +12,7 @@ ul { list-style: disc inside; }
 
 /* Navbar */
 .logo img {height: auto; width: 120px; max-height: 50px; display: block; cursor: pointer;}
-.navbar, .admin-nav { background:#f0c36d; color: #fff; }
+.navbar, .admin-nav { background:#f4c542; color: #fff; }
 .navbar { display: flex; align-items: center; justify-content: space-between; padding: 0; }
 .navbar .logo { font-size: 1.5em; }
 .nav-links ul {list-style: none; margin: 0; padding: 0; display: flex; gap: 1rem; }
@@ -43,6 +43,254 @@ ul { list-style: disc inside; }
   background: #f0c36d;
   color: #fff;
 }
+
+.about-us {
+  background-color: #f9f9f9;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.about-us h2 {
+  color: #00794f;
+}
+
+/* FMP API CSS */
+.stock-data {
+  background: #f4f9f6;
+  padding: 2rem;
+  text-align: center;
+}
+
+.stock-data h2 {
+  color: #00794f;
+  margin-bottom: 1rem;
+}
+
+#stock-info p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+/* Marquee Base */
+.marquee {
+  display: flex;
+  gap: 2rem;
+  animation: scroll-left 25s linear infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 1rem 0;
+}
+
+/* Pause on hover */
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.partners-marquee, .testimonials-marquee {
+  background: #f9f9f9;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.testimonials-marquee h2 {
+  color: #00754a;
+}
+
+.partners-marquee img {
+  height: 40px;
+  object-fit: contain;
+}
+
+.testimonials-marquee .testimonial {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 0.8rem 1.2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  min-width: 300px; /* Slightly larger for better text space */
+  max-width: 90vw;
+  white-space: normal;      /* Ensure text wraps */
+  overflow: hidden;         /* Prevent overflow */
+  text-align: left
+}
+
+.testimonials-marquee img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .marquee {
+    gap: 1rem;
+    animation-duration: 40s;
+  }
+
+  .testimonials-marquee .testimonial {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    min-width: 260px;
+    padding: 1rem;
+  }
+
+  .testimonials-marquee img {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* MEMBERSHIP PLAN CSS*/
+.membership-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 3rem 1rem;
+  gap: 2rem;
+}
+
+.membership-cards h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00754a;
+}
+
+.membership-cards .card {
+  background-color: #fff;
+  border: 2px solid #28a745;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.membership-cards .card:hover {
+  transform: translateY(-5px);
+}
+
+.membership-cards .card h2 {
+  font-size: 1.5rem;
+  color: #0a3d62;
+}
+
+.price {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  color: #333;
+}
+
+.price .yearly {
+  display: block;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.savings {
+  background: #e0ffe0;
+  color: #28a745;
+  font-weight: bold;
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.card a.modal-trigger {
+  display: inline-block;
+  background: #28a745;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+dialog h3 {
+  margin-top: 0;
+}
+
+.subscribe-btn {
+  margin-top: 1rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-modal {
+  margin-top: 1rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* COMMERCIAL BANK */
+.bank-section {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 1200px;
+  text-align: center;
+  color: #00754a;
+}
+
+.view-all-button {
+  background-color: #00754a;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.commercial-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.bank-card {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.bank-card img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
 
 @media (max-width: 768px) {
   .nav-links {
@@ -336,4 +584,12 @@ tr:nth-child(even) { background: #f2f2f2; }
 /* Responsive Helpers */
 @media (min-width: 768px) {
   .form-container { margin: 3em auto; }
+}
+
+.vault-footer {
+  background-color: #f4c542;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #004d26;
 }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Licensed Commercial Banks | 9jaVault</title>
+  <link rel="stylesheet" href="styles/commercial.css">
+</head>
+<body>
+  <header class="vault-header">
+    <h1>Licensed Commercial Banks</h1>
+    <p>Explore all CBN-approved commercial banks in Nigeria</p>
+  </header>
+
+  <main class="vault-main">
+    <div class="commercial-container" id="commercialFullList"></div>
+  </main>
+
+  <footer class="vault-footer">
+    <p>&copy; 2025 <strong>9jaVault</strong>. All rights reserved.</p>
+  </footer>
+
+  <script type="module">
+    import { commercial } from "./data/commercial.mjs";
+
+    const container = document.getElementById("commercialFullList");
+
+    commercial.forEach(bank => {
+      const card = document.createElement("div");
+      card.classList.add("bank-card");
+
+      const logo = document.createElement("img");
+      logo.src = `images/${bank.logo}`;
+      logo.alt = `${bank.name} logo`;
+
+      const name = document.createElement("h2");
+      name.textContent = bank.name;
+
+      const address = document.createElement("p");
+      address.innerHTML = `<strong>Address:</strong> ${bank.address}`;
+
+      const established = document.createElement("p");
+      established.innerHTML = `<strong>Established:</strong> ${bank.established}`;
+
+      const status = document.createElement("p");
+      status.innerHTML = `<strong>CBN Status:</strong> ${bank.cbn_status}`;
+
+      const website = document.createElement("a");
+      website.href = bank.website;
+      website.target = "_blank";
+      website.textContent = "Visit Website";
+
+      card.append(logo, name, address, established, status, website);
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>

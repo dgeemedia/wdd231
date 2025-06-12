@@ -89,3 +89,89 @@ document.addEventListener('DOMContentLoaded', () => {
       ₦${total.toFixed(2)} total
     `;
   });
+
+//MEMBERSHIP PLAN JS MODAL
+document.querySelectorAll('.modal-trigger').forEach(trigger => {
+  trigger.addEventListener('click', function (e) {
+    e.preventDefault();
+    const modalId = this.closest('.card').getAttribute('data-modal');
+    document.getElementById(modalId).showModal();
+  });
+});
+
+document.querySelectorAll('.close-modal').forEach(btn => {
+  btn.addEventListener('click', function () {
+    this.closest('dialog').close();
+  });
+});
+
+// Redirect to login.html with plan name
+document.querySelectorAll('.subscribe-btn').forEach(btn => {
+  btn.addEventListener('click', function () {
+    const plan = this.getAttribute('data-plan');
+    window.location.href = `login.html?plan=${encodeURIComponent(plan)}`;
+  });
+});
+
+import { commercial } from "../data/commercial.mjs";
+console.log(commercial)
+
+const container = document.getElementById("commercialContainer");
+const viewAllBtn = document.getElementById("viewAllBtn");
+
+// Preview first 6 commercial banks
+commercial.slice(0, 6).forEach(bank => {
+  const card = document.createElement("div");
+  card.classList.add("bank-card");
+
+  const img = document.createElement("img");
+  img.src = `images/${bank.logo}`;
+  img.alt = `${bank.name} Logo`;
+
+  const name = document.createElement("h3");
+  name.textContent = bank.name;
+
+  const website = document.createElement("a");
+  website.href = bank.website;
+  website.target = "_blank";
+  website.textContent = "Visit Website";
+
+  card.appendChild(img);
+  card.appendChild(name);
+  card.appendChild(website);
+
+  container.appendChild(card);
+});
+
+// Open full list in new tab (future implementation can link to a full bank list page)
+viewAllBtn.addEventListener("click", () => {
+  window.open("all-commercial-banks.html", "_blank");
+});
+
+//FINANCIAL MODELING PREP API
+async function fetchStockData() {
+  const apiKey = "mCPuYk40HMZlXiJTnYl2pytlL8kFFoOF";
+  const url = `https://financialmodelingprep.com/api/v3/quote/AAPL?apikey=${apiKey}`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    if (data && data.length > 0) {
+      const stock = data[0];
+      document.getElementById('stock-info').innerHTML = `
+        <h3>${stock.name} (${stock.symbol})</h3>
+        <p>Price: $${stock.price}</p>
+        <p>Change: ${stock.change} (${stock.changesPercentage}%)</p>
+        <p>Updated: ${new Date(stock.timestamp * 1000).toLocaleString()}</p>
+      `;
+    } else {
+      document.getElementById('stock-info').innerHTML = "<p>No stock data available.</p>";
+    }
+  } catch (error) {
+    document.getElementById('stock-info').innerHTML = "<p>Error loading stock data.</p>";
+    console.error("API error:", error);
+  }
+}
+
+fetchStockData();

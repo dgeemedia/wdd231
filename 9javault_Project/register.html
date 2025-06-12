@@ -6,8 +6,28 @@
   <title>Register – 9jaVault</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/register.css">
 </head>
 <body>
+    <!-- Header / Navigation -->
+  <nav class="navbar">
+
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="9jaVault Logo">
+    </a>
+
+    <div class="nav-mobile">
+    <button id="menu-toggle" aria-label="Toggle Menu"></button>
+    </div>
+
+    <div class="nav-links" id="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="hide-on-mobile"><a href="login.html">Login</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
   <div class="form-container">
     <h2>Create Account</h2>
     <form id="register-form">
@@ -16,8 +36,12 @@
         <input type="text" id="reg-name" required>
       </div>
       <div class="form-group">
+        <label for="phone">Phone number:</label>
+        <input type="email" id="phone" placeholder="08065104250" required>
+      </div>
+      <div class="form-group">
         <label for="reg-email">Email:</label>
-        <input type="email" id="reg-email" required>
+        <input type="email" id="reg-email" placeholder="xyz@domain.com" required>
       </div>
       <div class="form-group">
         <label for="reg-password">Password:</label>
@@ -29,10 +53,56 @@
       </div>
       <button type="submit" class="btn">Register</button>
     </form>
-    <p>By registering, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+<p>
+  By registering, you agree to our
+  <a href="#" id="openTerms">Terms of Service</a> and
+  <a href="#" id="openPrivacy">Privacy Policy</a>.
+</p>
+<div class="form-group">
+  <input type="checkbox" id="agree">
+  <label for="agree">I have read and agree to the Terms and Privacy Policy</label>
+</div>
+
     <p>Already have an account? <a href="login.html">Login here</a>.</p>
   </div>
 
+<!-- Terms Modal -->
+<div id="termsModal" class="modal">
+  <div class="modal-content" id="termsContent">
+    <span class="close" data-close="termsModal">&times;</span>
+    <h3>Terms of Service</h3>
+    <p>Welcome to 9jaVault! By creating an account, you agree to the following terms:</p>
+    <ul>
+      <li><strong>Use of Services:</strong> You must be 18 years or older and provide accurate information.</li>
+      <li><strong>Account Responsibility:</strong> You are responsible for maintaining the confidentiality of your login credentials.</li>
+      <li><strong>Prohibited Use:</strong> You may not use our service for unlawful purposes or to breach financial regulations.</li>
+      <li><strong>Content Ownership:</strong> All content on this site is owned by 9jaVault and may not be copied or redistributed without permission.</li>
+      <li><strong>Modifications:</strong> We reserve the right to update or change our terms at any time.</li>
+    </ul>
+    <p>By continuing, you confirm you have read and understood the terms listed above.</p>
+  </div>
+</div>
+
+<!-- Privacy Policy Modal -->
+<div id="privacyModal" class="modal">
+  <div class="modal-content" id="privacyContent">
+    <span class="close" data-close="privacyModal">&times;</span>
+    <h3>Privacy Policy</h3>
+    <p>At 9jaVault, your privacy matters. Here's how we protect and use your data:</p>
+    <ul>
+      <li><strong>Information Collection:</strong> We collect personal data such as your name and email to provide investment services.</li>
+      <li><strong>Use of Data:</strong> Your data helps us personalize your experience and improve platform functionality.</li>
+      <li><strong>Data Sharing:</strong> We never sell your data. We may share limited data with financial partners when necessary to process transactions.</li>
+      <li><strong>Security:</strong> We use encryption and secure protocols to protect your data.</li>
+      <li><strong>Your Rights:</strong> You can request access or deletion of your data anytime.</li>
+    </ul>
+    <p>By continuing, you acknowledge you have read and understood this privacy notice.</p>
+  </div>
+</div>
+
+
+
   <script src="scripts/script.js"></script>
+  <script src="scripts/register.js"></script>
 </body>
 </html>

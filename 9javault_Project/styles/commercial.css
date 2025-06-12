@@ -1,0 +1,82 @@
+/* 9jaVault Branding */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+.vault-header {
+  background-color: #004d26;
+  color: #f4c542;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.vault-header h1 {
+  margin-bottom: 0.2rem;
+}
+
+.vault-main {
+  padding: 2rem;
+}
+
+.commercial-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.bank-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.bank-card:hover {
+  transform: translateY(-3px);
+}
+
+.bank-card img {
+  width: 60px;
+  margin-bottom: 0.7rem;
+}
+
+.bank-card h2 {
+  color: #004d26;
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+}
+
+.bank-card p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.bank-card a {
+  display: inline-block;
+  margin-top: 0.6rem;
+  background-color: #004d26;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.bank-card a:hover {
+  background-color: #006b3c;
+}
+
+.vault-footer {
+  background-color: #f4c542;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #004d26;
+}

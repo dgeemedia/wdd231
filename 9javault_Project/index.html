@@ -25,7 +25,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li class="hide-on-mobile"><a href="login.html">Login</a></li>
-        <li><a href="register.html">Register</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -53,9 +53,10 @@
       <form id="calc-form">
         <input type="number" id="amount" placeholder="Amount (₦)" required />
         <select id="rate">
-          <option value="11">11%</option>
-          <option value="12.5">12.5%</option>
-          <option value="13">13%</option>
+          <option value="16">16%</option>
+          <option value="18.5">18.5%</option>
+          <option value="20">20%</option>
+          <option value="22">22%</option>
         </select>
         <select id="tenure">
           <option value="30">30 days</option>
@@ -70,22 +71,114 @@
   </div>
 </header>
 
-
-  <!-- Features / Info Section -->
-  <section class="features">
-    <h2>Why Use 9jaVault?</h2>
-    <ul>
-      <li>Compare rates from multiple banks in one place</li>
-      <li>Free basic plan with standard listings</li>
-      <li>Upgrade for premium access to all tenures</li>
-    </ul>
+<!-- About Us Section -->
+<section class="about-us">
+  <h2>About 9jaVault</h2>
+  <p>
+    9jaVault is Nigeria’s first dedicated investment rate comparison platform. 
+    We empower everyday Nigerians to make smarter financial decisions by providing 
+    real-time data on savings and investment products from top financial institutions.
+  </p>
+  <a href="about.html" class="read-more-link">Read More &rarr;</a>
   </section>
 
+<section class="stock-data">
+  <h2>Market Insights</h2>
+  <div id="stock-info">
+    <p>Loading stock data...</p>
+  </div>
+</section>
+
+<!-- Testimonials Marquee -->
+<section class="testimonials-marquee">
+  <h2>What Our Users Say</h2>
+  <div class="marquee testimonials">
+    <div class="testimonial">
+      <img src="images/profile.jpg" alt="User Avatar">
+      <p>"9jaVault helped me find the best fixed deposit rate. So easy!"</p>
+    </div>
+    <div class="testimonial">
+      <img src="images/profile.jpg" alt="User Avatar">
+      <p>"As a first-time investor, this platform gave me confidence."</p>
+    </div>
+    <!-- Add more testimonials -->
+  </div>
+</section>
+
+<!-- MEMBERSHIP PLAN SECTION -->
+ <section class="membership-cards">
+  <h2>Our Plan</h2>
+  <div class="card" data-modal="basicModal">
+    <h2>Basic Plan</h2>
+    <p class="price">Free</p>
+    <a href="#" class="modal-trigger">View Benefits</a>
+  </div>
+  <div class="card" data-modal="classicModal">
+    <h2>Classic Plan</h2>
+    <p class="price">₦1,000 / month<br><span class="yearly">₦10,000 / year</span></p>
+    <p class="savings">🎉 Save ₦2,000 yearly</p>
+    <a href="#" class="modal-trigger">View Benefits</a>
+  </div>
+  <div class="card" data-modal="platinumModal">
+    <h2>Platinum Plan</h2>
+    <p class="price">₦5,000 / month<br><span class="yearly">₦50,000 / year</span></p>
+    <p class="savings">🚀 Save ₦10,000 yearly</p>
+    <a href="#" class="modal-trigger">View Benefits</a>
+  </div>
+</section>
+
+<!-- MEMBERSHIP PLAN Modals -->
+<dialog id="basicModal">
+  <h3>Basic Plan</h3>
+  <p>Free plan with limited investment listings.</p>
+  <button class="subscribe-btn" data-plan="Basic">Subscribe Now</button>
+  <button class="close-modal">Close</button>
+</dialog>
+
+<dialog id="classicModal">
+  <h3>Classic Plan</h3>
+  <p>Unlimited investment listings with access to premium rates.</p>
+  <button class="subscribe-btn" data-plan="Basic">Subscribe Now</button>
+  <button class="close-modal">Close</button>
+</dialog>
+
+<dialog id="platinumModal">
+  <h3>Platinum Plan</h3>
+  <p>All Classic features plus a dedicated financial advisor from a top bank.</p>
+  <button class="subscribe-btn" data-plan="Basic">Subscribe Now</button>
+  <button class="close-modal">Close</button>
+</dialog>
+
+<!--ACTIVE FINANCIAL INSTITUTION-->
+<section class="bank-section">
+  <h2>Licensed Commercial Banks</h2>
+  <button id="viewAllBtn" class="view-all-button">View All Commercial Banks</button>
+  <div class="commercial-container" id="commercialContainer"></div>
+</section>
+
+<!-- Placeholder for other sections -->
+<section class="bank-section"><h2>Licensed Merchant Banks</h2><div id="merchantContainer">Coming soon...</div></section>
+<section class="bank-section"><h2>Licensed Fintech Companies</h2><div id="fintechContainer">Coming soon...</div></section>
+<section class="bank-section"><h2>Microfinance Banks</h2><div id="microfinanceContainer">Coming soon...</div></section>
+<section class="bank-section"><h2>Development Banks</h2><div id="developmentContainer">Coming soon...</div></section>
+
+<!-- Our Partners Section -->
+<section class="partners-marquee">
+  <h2>Our Partners</h2>
+  <div class="marquee">
+    <img src="images/gtbank.webp" alt="GTBank">
+    <img src="images/first.webp" alt="FirstBank">
+    <img src="images/zenith.webp" alt="Zenith">
+    <img src="images/access.webp" alt="Access Bank">
+    <!-- Add more logos as needed -->
+  </div>
+</section>
+
   <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 9jaVault. All rights reserved.</p>
+  <footer class="vault-footer">
+    <p>&copy; 2025 <strong>9jaVault</strong>. All rights reserved.</p>
   </footer>
 
-  <script src="scripts/script.js"></script>
+  <script src="scripts/script.js" type="module"></script>
 </body>
 </html>
