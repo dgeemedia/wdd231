@@ -536,3 +536,9 @@ dialog h3 {
   font-size: 0.9rem;
   color: #004d26;
 }
+.vault-footer a {
+  color: #004d00;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 0.5rem;
+}

@@ -113,6 +113,8 @@ document.querySelectorAll('.subscribe-btn').forEach(btn => {
   });
 });
 
+// First Video Explanation - Javascript module
+// JSON Commercial bank display
 import { commercial } from "../data/commercial.mjs";
 console.log(commercial)
 
@@ -148,30 +150,31 @@ viewAllBtn.addEventListener("click", () => {
   window.open("all-commercial-banks.html", "_blank");
 });
 
+// Second Video Explanation API Fetch Using Async/Await
 //FINANCIAL MODELING PREP API
 async function fetchStockData() {
-  const apiKey = "mCPuYk40HMZlXiJTnYl2pytlL8kFFoOF";
-  const url = `https://financialmodelingprep.com/api/v3/quote/AAPL?apikey=${apiKey}`;
+  const url = "https://financialmodelingprep.com/api/v3/quote/AAPL?apikey=mCPuYk40HMZlXiJTnYl2pytlL8kFFoOF";
+  const stockInfo = document.getElementById('stock-info');
 
   try {
-    const response = await fetch(url);
-    const data = await response.json();
+    const res = await fetch(url);
+    const [stock] = await res.json(); // Destructure first item
 
-    if (data && data.length > 0) {
-      const stock = data[0];
-      document.getElementById('stock-info').innerHTML = `
+    if (stock) {
+      stockInfo.innerHTML = `
         <h3>${stock.name} (${stock.symbol})</h3>
         <p>Price: $${stock.price}</p>
         <p>Change: ${stock.change} (${stock.changesPercentage}%)</p>
         <p>Updated: ${new Date(stock.timestamp * 1000).toLocaleString()}</p>
       `;
     } else {
-      document.getElementById('stock-info').innerHTML = "<p>No stock data available.</p>";
+      stockInfo.innerHTML = "<p>No stock data available.</p>";
     }
-  } catch (error) {
-    document.getElementById('stock-info').innerHTML = "<p>Error loading stock data.</p>";
-    console.error("API error:", error);
+  } catch (err) {
+    stockInfo.innerHTML = "<p>Error loading stock data.</p>";
+    console.error("Fetch error:", err);
   }
 }
+
 
 fetchStockData();
