@@ -128,6 +128,7 @@ commercial.slice(0, 6).forEach(bank => {
   const img = document.createElement("img");
   img.src = `images/${bank.logo}`;
   img.alt = `${bank.name} Logo`;
+  img.loading = "lazy";
 
   const name = document.createElement("h3");
   name.textContent = bank.name;

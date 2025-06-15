@@ -87,6 +87,7 @@
       const logo = document.createElement("img");
       logo.src = `images/${bank.logo}`;
       logo.alt = `${bank.name} logo`;
+      img.loading = "lazy";
 
       const name = document.createElement("h2");
       name.textContent = bank.name;
