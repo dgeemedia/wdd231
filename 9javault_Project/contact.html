@@ -1,26 +1,43 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Contact Us – 9jaVault</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link rel="stylesheet" href="styles/contact.css" />
+  <meta charset="UTF-8">
+  <title>Contact – Compare Nigerian Investment Rates</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fintech Platform For Investment Purposes">
+  <meta name="author" content="Lucky George Olumah">
+
+    <!-- Open Graph Meta -->
+  <meta property="og:title" content="9jaVault Investment Platform">
+  <meta property="og:description" content="Nigeria’s first dedicated investment rate comparison platform. 
+    We empower everyday Nigerians to make smarter financial decisions by providing 
+    real-time data on savings and investment products from top financial institutions">
+  <meta property="og:image" content="https://dgeemedia.github.io/wdd231/9javault_Project/images/logo.png">
+  <meta property="og:url" content="https://dgeemedia.github.io/wdd231/9javault_Project/index.html">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/contact.css">
 </head>
 <body>
-  <!-- Header / Navigation -->
+<!-- Header / Navigation -->
   <nav class="navbar">
+
     <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="9jaVault Logo" />
+      <img src="images/logo.png" alt="9jaVault Logo">
     </a>
+
     <div class="nav-mobile">
-      <button id="menu-toggle" aria-label="Toggle Menu"></button>
+    <a href="login.html" class="btn btn-login">Login</a>
+    <button id="menu-toggle" aria-label="Toggle Menu"></button>
     </div>
+
     <div class="nav-links" id="nav-menu">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li class="hide-on-mobile"><a href="login.html">Login</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -69,11 +86,30 @@
     </section>
   </main>
 
+  <!--Footer-->
 <footer class="vault-footer">
-  <p>&copy; 2025 <strong>9jaVault</strong>. All rights reserved.</p>
-  <p><a href="https://www.youtube.com/watch?v=your-video-id" target="_blank">📺 Watch Demo Video: JavaScript API + Async</a></p>
+  <div class="footer-left">
+    <h3>Quick Links</h3>
+    <a href="about.html">ℹ️ About</a>
+    <a href="all-commercial-banks.html">🏦 Commercial Banks</a>
+    <a href="login.html">🔐 Login</a>
+    <a href="register.html">📝 Register</a>
+    <a href="dashboard.html">📊 Dashboard</a>
+    <a href="contact.html">📩 Contact Us</a>
+    <a href="contact.html">📩 Careers</a>
+  </div>
+
+  <div class="footer-center">
+    <p>&copy; 2025 <strong>WDD231 CLASS PROJECT (Lucky George Olumah) 9jaVault</strong>. All rights reserved.</p>
+  </div>
+
+  <div class="footer-right">
+    <a href="https://www.loom.com/share/c998b27ff0be49c0b16a89294c2c51c8?sid=244ec610-9aae-4a6b-83ca-d7c6372506d2" target="_blank">
+      📺 Watch Demo Video: JavaScript API + Async
+    </a>
+  </div>
 </footer>
 
-  <script src="scripts/script.js"></script>
+  <script src="scripts/script.js" type="module"></script>
 </body>
 </html>
