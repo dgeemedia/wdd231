@@ -176,5 +176,4 @@ async function fetchStockData() {
   }
 }
 
-
 fetchStockData();
