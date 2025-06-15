@@ -116,7 +116,6 @@ document.querySelectorAll('.subscribe-btn').forEach(btn => {
 // First Video Explanation - Javascript module
 // JSON Commercial bank display
 import { commercial } from "../data/commercial.mjs";
-console.log(commercial)
 
 const container = document.getElementById("commercialContainer");
 const viewAllBtn = document.getElementById("viewAllBtn");
